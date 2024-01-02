@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+</body>
+
+<script>
+  function throttled(fn, delay) {
+    let starttime = 0
+    return function () {
+      let curTime = new Date().getTime() // 当前时间
+      let remaining = delay - (curTime - starttime)  // 从上一次到现在，还剩下多少多余时间
+      console.log(remaining)
+      let context = this
+      let args = arguments
+      if (remaining <= 0) {
+        fn.apply(context, args)
+        starttime = curTime
+      }
+    }
+  }
+
+  let input = document.querySelector('input')
+  const foo = function () {
+    console.log('函数执行');
+  }
+  input.oninput = throttled(foo, 2000)
+  // console.log(input);
+</script>
+
+</html>

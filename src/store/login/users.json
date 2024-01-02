@@ -1,0 +1,107 @@
+{
+  "code": 0,
+  "data": {
+    "list": [
+      {
+        "id": 45,
+        "name": "james",
+        "realname": "詹姆斯",
+        "cellphone": 18812345678,
+        "enable": 1,
+        "departmentId": 1,
+        "roleId": 1,
+        "createAt": "2021-01-02T10:01:52.000Z",
+        "updateAt": "2021-01-02T10:01:52.000Z"
+      },
+      {
+        "id": 42,
+        "name": "lucy",
+        "realname": "lucy",
+        "cellphone": 15345245678,
+        "enable": 1,
+        "departmentId": 1,
+        "roleId": 1,
+        "createAt": "2021-07-02T10:01:52.000Z",
+        "updateAt": "2021-07-02T10:01:52.000Z"
+      },
+      {
+        "id": 9,
+        "name": "lili",
+        "realname": "lili",
+        "cellphone": 15555555555,
+        "enable": 1,
+        "departmentId": 2,
+        "roleId": 1,
+        "createAt": "2021-04-10T10:01:52.000Z",
+        "updateAt": "2021-04-10T10:01:52.000Z"
+      },
+      {
+        "id": 40,
+        "name": "lyh",
+        "realname": "李银河",
+        "cellphone": 12579246810,
+        "enable": 1,
+        "departmentId": 2,
+        "roleId": 3,
+        "createAt": "2021-08-08T10:01:52.000Z",
+        "updateAt": "2021-08-08T10:01:52.000Z"
+      },
+      {
+        "id": 90,
+        "name": "kobe",
+        "realname": "科比",
+        "cellphone": 19746538201,
+        "enable": 1,
+        "departmentId": 1,
+        "roleId": 2,
+        "createAt": "2021-02-02T10:01:52.000Z",
+        "updateAt": "2021-02-02T10:01:52.000Z"
+      },
+      {
+        "id": 8,
+        "name": "wxb",
+        "realname": "王小波",
+        "cellphone": 13784858782,
+        "enable": 1,
+        "departmentId": 2,
+        "roleId": 3,
+        "createAt": "2021-04-22T10:01:52.000Z",
+        "updateAt": "2021-04-22T10:01:52.000Z"
+      },
+      {
+        "id": 7,
+        "name": "moyan",
+        "realname": "莫言",
+        "cellphone": 13778778782,
+        "enable": 1,
+        "departmentId": 2,
+        "roleId": 3,
+        "createAt": "2021-06-22T10:01:52.000Z",
+        "updateAt": "2021-06-22T10:01:52.000Z"
+      },
+      {
+        "id": 44,
+        "name": "yuhua",
+        "realname": "余华",
+        "cellphone": 13788888782,
+        "enable": 1,
+        "departmentId": 2,
+        "roleId": 2,
+        "createAt": "2021-09-22T10:01:52.000Z",
+        "updateAt": "2021-09-22T10:01:52.000Z"
+      },
+      {
+        "id": 55,
+        "name": "zhangsan",
+        "realname": "张三",
+        "cellphone": 18888888888,
+        "enable": 1,
+        "departmentId": 2,
+        "roleId": 3,
+        "createAt": "2021-06-29T10:01:52.000Z",
+        "updateAt": "2021-06-29T10:01:52.000Z"
+      }
+    ],
+    "totalCount": 9
+  }
+}
