@@ -1,0 +1,33 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "address": "上海",
+      "count": 65454
+    },
+    {
+      "address": "北京",
+      "count": 84554
+    },
+    {
+      "address": "西安",
+      "count": 9004
+    },
+    {
+      "address": "成都",
+      "count": 23454
+    },
+    {
+      "address": "广州",
+      "count": 66664
+    },
+    {
+      "address": "重庆",
+      "count": 99999
+    },
+    {
+      "address": "石家庄",
+      "count": 88888
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "id": 2,
+      "name": "上衣",
+      "goodsCount": 1434
+    },
+    {
+      "id": 3,
+      "name": "女装",
+      "goodsCount": 2044
+    },
+    {
+      "id": 4,
+      "name": "裤子",
+      "goodsCount": 1822
+    },
+    {
+      "id": 5,
+      "name": "鞋子",
+      "goodsCount": 2456
+    },
+    {
+      "id": 6,
+      "name": "厨具",
+      "goodsCount": 1223
+    },
+    {
+      "id": 7,
+      "name": "家具",
+      "goodsCount": 1611
+    },
+    {
+      "id": 8,
+      "name": "床上用品",
+      "goodsCount": 2622
+    }
+  ]
+}

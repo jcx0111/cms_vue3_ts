@@ -8,31 +8,30 @@
 </head>
 
 <body>
-  <input type="text">
-</body>
+  <button id="new">新的标签页</button>
+  <button id="send">发送数据</button>
 
-<script>
-  function throttled(fn, delay) {
-    let starttime = 0
-    return function () {
-      let curTime = new Date().getTime() // 当前时间
-      let remaining = delay - (curTime - starttime)  // 从上一次到现在，还剩下多少多余时间
-      console.log(remaining)
-      let context = this
-      let args = arguments
-      if (remaining <= 0) {
-        fn.apply(context, args)
-        starttime = curTime
+
+  <script>
+    let count = 1
+    let opener = null
+    const btn1 = document.getElementById("new")
+    const btn2 = document.getElementById("send")
+    btn1.addEventListener("click", () => {
+      opener = window.open(
+        "b.html",
+        "123",
+        "width = 500,height = 700,top=20,resizeable=yes"
+      )
+    })
+    btn2.addEventListener("click", () => {
+      const date = {
+        value: `moment${count++}`
       }
-    }
-  }
 
-  let input = document.querySelector('input')
-  const foo = function () {
-    console.log('函数执行');
-  }
-  input.oninput = throttled(foo, 2000)
-  // console.log(input);
-</script>
+      opener.postMessage(date, "*")
+    })
+  </script>
+</body>
 
 </html>

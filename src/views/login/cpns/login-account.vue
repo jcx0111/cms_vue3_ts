@@ -37,11 +37,9 @@ export default defineComponent({
     const accountFormRef = ref<InstanceType<typeof ElForm>>()
 
     const accountLogin = () => {
-      // console.log('开始登录')
       //validate验证通过返回true
       accountFormRef.value?.validate((valid) => {
         if (valid) {
-          // console.log('真正的登录逻辑')
           //是否记住密码
           if (isKeepPassWord.value) {
             localCache.setCache('name', account.name)

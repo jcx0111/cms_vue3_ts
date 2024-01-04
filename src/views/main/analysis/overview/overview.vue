@@ -1,6 +1,6 @@
 <template>
   <div class="overview">
-    <h2>overview</h2>
+    <h2>核心技术</h2>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 import { Module } from 'vuex'
 import router from '@/router'
 import { ILoginState } from './types'
-import { IRootState } from '../types'
+import { IRootState } from '../../store/types'
 import localCache from '@/utils/cache'
 import { mapMenusToRoutes } from '@/utils/map-menus'
 import { IAccount } from '@/service/login/types'

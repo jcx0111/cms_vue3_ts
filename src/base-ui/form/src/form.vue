@@ -78,6 +78,14 @@ export default defineComponent({
       })
     }
   },
+  // directives: {
+  //   focus: {
+  //     未解决问题：只是密码框自动聚焦
+  //     mounted(el) {
+  //       el.firstElementChild.focus()
+  //     }
+  //   }
+  // },
   emits: ['update:modelValue'],
   setup(props, { emit }) {
     const formData = ref({ ...props.modelValue })
