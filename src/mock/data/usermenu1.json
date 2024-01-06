@@ -1,0 +1,227 @@
+{
+  "code": 0,
+  "data": [
+    {
+      "children": [
+        {
+          "children": null,
+          "id": 39,
+          "name": "核心技术",
+          "parentId": 38,
+          "sort": 106,
+          "type": 2,
+          "url": "/main/analysis/overview"
+        },
+        {
+          "children": null,
+          "id": 40,
+          "name": "商品统计",
+          "parentId": 38,
+          "sort": 107,
+          "type": 2,
+          "url": "/main/analysis/dashboard"
+        }
+      ],
+      "icon": "el-icon-monitor",
+      "id": 38,
+      "name": "系统总览",
+      "sort": 1,
+      "type": 1,
+      "url": "/main/analysis"
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "id": 5,
+              "name": "创建用户",
+              "parentId": 2,
+              "permission": "system:user:create",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 6,
+              "name": "删除用户",
+              "parentId": 2,
+              "permission": "system:user:delete",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 7,
+              "name": "修改用户",
+              "parentId": 2,
+              "permission": "system:user:update",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 8,
+              "name": "查询用户",
+              "parentId": 2,
+              "permission": "system:user:query",
+              "sort": null,
+              "type": 3,
+              "url": null
+            }
+          ],
+          "id": 2,
+          "name": "用户管理",
+          "parentId": 1,
+          "sort": 100,
+          "type": 2,
+          "url": "/main/system/user"
+        },
+        {
+          "children": [
+            {
+              "id": 17,
+              "name": "创建部门",
+              "parentId": 3,
+              "permission": "system:department:create",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 18,
+              "name": "删除部门",
+              "parentId": 3,
+              "permission": "system:department:delete",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 19,
+              "name": "修改部门",
+              "parentId": 3,
+              "permission": "system:department:update",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 20,
+              "name": "查询部门",
+              "parentId": 3,
+              "permission": "system:department:query",
+              "sort": null,
+              "type": 3,
+              "url": null
+            }
+          ],
+          "id": 3,
+          "name": "部门管理",
+          "parentId": 1,
+          "sort": 101,
+          "type": 2,
+          "url": "/main/system/department"
+        },
+        {
+          "children": [
+            {
+              "id": 5,
+              "name": "创建菜单",
+              "parentId": 2,
+              "permission": "system:menu:create",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 6,
+              "name": "删除菜单",
+              "parentId": 2,
+              "permission": "system:menu:delete",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 7,
+              "name": "修改菜单",
+              "parentId": 2,
+              "permission": "system:menu:update",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 8,
+              "name": "查询菜单",
+              "parentId": 2,
+              "permission": "system:menu:query",
+              "sort": null,
+              "type": 3,
+              "url": null
+            }
+          ],
+          "id": 4,
+          "name": "菜单管理",
+          "parentId": 1,
+          "sort": 102,
+          "type": 2,
+          "url": "/main/system/menu"
+        },
+        {
+          "children": [
+            {
+              "id": 5,
+              "name": "创建角色",
+              "parentId": 2,
+              "permission": "system:role:create",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 6,
+              "name": "删除角色",
+              "parentId": 2,
+              "permission": "system:role:delete",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 7,
+              "name": "修改角色",
+              "parentId": 2,
+              "permission": "system:role:update",
+              "sort": null,
+              "type": 3,
+              "url": null
+            },
+            {
+              "id": 8,
+              "name": "查询角色",
+              "parentId": 2,
+              "permission": "system:role:query",
+              "sort": null,
+              "type": 3,
+              "url": null
+            }
+          ],
+          "id": 5,
+          "name": "角色管理",
+          "parentId": 1,
+          "sort": 103,
+          "type": 2,
+          "url": "/main/system/role"
+        }
+      ],
+      "icon": "el-icon-setting",
+      "id": 1,
+      "name": "系统管理",
+      "sort": 2,
+      "type": 1,
+      "url": "/main/system"
+    }
+  ]
+}

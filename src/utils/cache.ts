@@ -9,7 +9,7 @@ class LocalCache {
       return JSON.parse(value)
     }
   }
-  deletaCache(key: string) {
+  deleteCache(key: string) {
     window.localStorage.removeItem(key)
   }
 }

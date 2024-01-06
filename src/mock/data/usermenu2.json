@@ -34,24 +34,6 @@
         {
           "children": [
             {
-              "id": 5,
-              "name": "创建用户",
-              "parentId": 2,
-              "permission": "system:user:create",
-              "sort": null,
-              "type": 3,
-              "url": null
-            },
-            {
-              "id": 6,
-              "name": "删除用户",
-              "parentId": 2,
-              "permission": "system:user:delete",
-              "sort": null,
-              "type": 3,
-              "url": null
-            },
-            {
               "id": 7,
               "name": "修改用户",
               "parentId": 2,
@@ -79,24 +61,6 @@
         },
         {
           "children": [
-            {
-              "id": 17,
-              "name": "创建部门",
-              "parentId": 3,
-              "permission": "system:department:create",
-              "sort": null,
-              "type": 3,
-              "url": null
-            },
-            {
-              "id": 18,
-              "name": "删除部门",
-              "parentId": 3,
-              "permission": "system:department:delete",
-              "sort": null,
-              "type": 3,
-              "url": null
-            },
             {
               "id": 19,
               "name": "修改部门",
@@ -126,37 +90,19 @@
         {
           "children": [
             {
-              "id": 5,
-              "name": "创建用户",
-              "parentId": 2,
-              "permission": "system:user:create",
-              "sort": null,
-              "type": 3,
-              "url": null
-            },
-            {
-              "id": 6,
-              "name": "删除用户",
-              "parentId": 2,
-              "permission": "system:user:delete",
-              "sort": null,
-              "type": 3,
-              "url": null
-            },
-            {
               "id": 7,
-              "name": "修改用户",
+              "name": "修改菜单",
               "parentId": 2,
-              "permission": "system:user:update",
+              "permission": "system:menu:update",
               "sort": null,
               "type": 3,
               "url": null
             },
             {
               "id": 8,
-              "name": "查询用户",
+              "name": "查询菜单",
               "parentId": 2,
-              "permission": "system:user:query",
+              "permission": "system:menu:query",
               "sort": null,
               "type": 3,
               "url": null
@@ -172,37 +118,19 @@
         {
           "children": [
             {
-              "id": 5,
-              "name": "创建用户",
-              "parentId": 2,
-              "permission": "system:user:create",
-              "sort": null,
-              "type": 3,
-              "url": null
-            },
-            {
-              "id": 6,
-              "name": "删除用户",
-              "parentId": 2,
-              "permission": "system:user:delete",
-              "sort": null,
-              "type": 3,
-              "url": null
-            },
-            {
               "id": 7,
-              "name": "修改用户",
+              "name": "修改角色",
               "parentId": 2,
-              "permission": "system:user:update",
+              "permission": "system:role:update",
               "sort": null,
               "type": 3,
               "url": null
             },
             {
               "id": 8,
-              "name": "查询用户",
+              "name": "查询角色",
               "parentId": 2,
-              "permission": "system:user:query",
+              "permission": "system:role:query",
               "sort": null,
               "type": 3,
               "url": null

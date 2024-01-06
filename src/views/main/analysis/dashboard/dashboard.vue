@@ -59,11 +59,13 @@ export default defineComponent({
   setup() {
     const store = useStore()
     store.dispatch('dashboard/getDashboardDataAction')
+
     const goodsCount = computed(() => {
       return store.state.dashboard.categoryGoodsCount.map((item) => {
         return { value: item.goodsCount, name: item.name }
       })
     })
+
     const goodsCountOption = {
       tooltip: {
         trigger: 'item'

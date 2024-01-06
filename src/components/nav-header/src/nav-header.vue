@@ -14,7 +14,7 @@
           </span>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item>退出登录</el-dropdown-item>
+              <el-dropdown-item @click="handleQuit">退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </template>
         </el-dropdown>
@@ -26,10 +26,11 @@
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue'
 import { useStore } from '@/store'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import NavBreadcrumb from '../../nav-breadcrumb'
 import { pathMapToBreadcrumbs } from '@/utils/map-menus'
 import { Fold, Expand, User } from '@element-plus/icons-vue'
+import localCache from '@/utils/cache'
 import emitter from '@/bus'
 export default defineComponent({
   components: {
@@ -55,12 +56,17 @@ export default defineComponent({
       return pathMapToBreadcrumbs(userMenus, currentPath)
     })
     // console.log(breadcrumbs)
-
+    const router = useRouter()
+    const handleQuit = () => {
+      localCache.deleteCache('token')
+      router.push('/main')
+    }
     return {
       isFold,
       name,
       changeFold,
-      breadcrumbs
+      breadcrumbs,
+      handleQuit
     }
   }
 })

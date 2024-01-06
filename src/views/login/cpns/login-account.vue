@@ -45,8 +45,8 @@ export default defineComponent({
             localCache.setCache('name', account.name)
             localCache.setCache('password', account.password)
           } else {
-            localCache.deletaCache('name')
-            localCache.deletaCache('password')
+            localCache.deleteCache('name')
+            localCache.deleteCache('password')
           }
           //进行登录验证
           store.dispatch('login/accountLoginAction', { ...account })

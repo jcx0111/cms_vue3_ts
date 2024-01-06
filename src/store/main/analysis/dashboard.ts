@@ -39,16 +39,14 @@ const dashboardModule: Module<IDashboardState, IRootState> = {
       // const goodsFavorResult = await goodsFavorRequest()
       const goodsSaleResult = await goodsSaleRequest()
       // const addressSaleResult = await goodsAddressRequest()
-
-      commit('changeGoodsCount', goodsCountResult.data)
+      const list = goodsCountResult.data
+      commit('changeGoodsCount', list)
 
       // commit('changeGoodsFavor', goodsFavorResult.data)
 
       commit('changeGoodsSale', goodsSaleResult.data)
 
       // commit('changeGoodsAddress', addressSaleResult.data)
-
-      console.log('发送')
     }
   }
 }

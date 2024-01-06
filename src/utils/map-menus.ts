@@ -62,4 +62,21 @@ export function pathMapToMenu(
   }
 }
 
+//按钮权限遍历
+export function getBtnPermissions(userMenus: any[]) {
+  const btnPermission: string[] = []
+
+  function _recurseGetPermission(menus: any[]) {
+    for (const menu of menus) {
+      if (menu.type === 1 || menu.type === 2) {
+        _recurseGetPermission(menu.children ?? [])
+      } else if (menu.type === 3) {
+        btnPermission.push(menu.permission)
+      }
+    }
+  }
+  _recurseGetPermission(userMenus)
+  return btnPermission
+}
+
 export { firstMenu }

@@ -23,7 +23,9 @@
       >
         <!-- header中的插槽 -->
         <template #headerHandler>
-          <el-button type="primary" size="small">添加用户</el-button>
+          <el-button type="primary" size="small" v-if="btnPermission.includes('system:user:create')"
+            >添加用户</el-button
+          >
         </template>
         <!-- 列中的插槽 -->
         <template #status="scope">
@@ -38,7 +40,12 @@
         <template #handler>
           <div class="handler-btns">
             <el-button icon="el-icon-edit" type="text">编辑</el-button>
-            <el-button icon="el-icon-delete" type="text">删除</el-button>
+            <el-button
+              icon="el-icon-delete"
+              type="text"
+              v-if="btnPermission.includes('system:user:delete')"
+              >删除</el-button
+            >
           </div>
         </template>
       </hy-table>
@@ -60,6 +67,13 @@ export default defineComponent({
     HyForm,
     HyTable
   },
+  // directives: {
+  //   permission: {
+  //     mounted(el: HTMLElement, binding) {
+  //       console.log(binding.value.length)
+  //     }
+  //   }
+  // },
   setup() {
     const formData = ref({
       id: '',
@@ -76,6 +90,7 @@ export default defineComponent({
       formData.value.createTime = ''
     }
     const store = useStore()
+    const btnPermission = store.state.login.btnPermission
     store.dispatch('system/getPageListAction', {
       pageUrl: '/mock/user/list',
       qaueryInfo: {
@@ -103,6 +118,7 @@ export default defineComponent({
       formData,
       formReset,
       title,
+      btnPermission,
       userList,
       userCount,
       propList,

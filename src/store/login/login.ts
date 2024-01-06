@@ -3,7 +3,7 @@ import router from '@/router'
 import { ILoginState } from './types'
 import { IRootState } from '../../store/types'
 import localCache from '@/utils/cache'
-import { mapMenusToRoutes } from '@/utils/map-menus'
+import { mapMenusToRoutes, getBtnPermissions } from '@/utils/map-menus'
 import { IAccount } from '@/service/login/types'
 import {
   accountLoginRequest,
@@ -19,7 +19,8 @@ const loginModule: Module<ILoginState, IRootState> = {
       // userInfo: localCache.getCache('userInfo') ?? {}
       token: '',
       userInfo: {},
-      userMenus: []
+      userMenus: [],
+      btnPermission: []
     }
   },
   getters: {},
@@ -34,6 +35,9 @@ const loginModule: Module<ILoginState, IRootState> = {
       state.userMenus = userMenus
       //根据userMenu中的url动态加载路由
       const routes = mapMenusToRoutes(userMenus)
+      const btnPermission = getBtnPermissions(userMenus)
+      state.btnPermission = btnPermission
+
       routes.forEach((route) => {
         router.addRoute('main', route)
       })

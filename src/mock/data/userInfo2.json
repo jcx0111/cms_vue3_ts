@@ -1,0 +1,27 @@
+{
+  "code": 0,
+  "data": {
+    "id": 2,
+    "name": "zhangsan",
+    "realname": "张三",
+    "cellphone": 18888888888,
+    "enable": 1,
+    "createAt": "2021-01-02T10:01:52.000Z",
+    "updateAt": "2021-01-02T10:01:52.000Z",
+    "role": {
+      "id": 2,
+      "name": "HR",
+      "intro": "编辑用户",
+      "createAt": "2021-06-29T10:01:52.000Z",
+      "updateAt": "2021-06-29T10:01:52.000Z"
+    },
+    "department": {
+      "id": 1,
+      "name": "总裁办",
+      "parentId": null,
+      "createAt": "2021-01-02T10:01:52.000Z",
+      "updateAt": "2021-01-02T10:01:52.000Z",
+      "leader": "coderwhy"
+    }
+  }
+}
