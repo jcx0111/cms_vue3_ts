@@ -17,7 +17,6 @@ export default defineComponent({
       const goodsSale = computed(() => {
         return store.state.dashboard.categoryGoodsSale
       })
-      console.log(goodsSale.value)
 
       const data = goodsSale.value.map((item) => {
         return { name: item.name, value: item.goodsCount }

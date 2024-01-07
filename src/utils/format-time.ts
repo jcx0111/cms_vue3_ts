@@ -9,3 +9,8 @@ const TIME_FORMAT = 'YYYY-MM-DD HH:mm:ss'
 export function formatUtcString(utcString: string, format: string = TIME_FORMAT) {
   return dayjs.utc(utcString).format(format)
 }
+
+export function getUtcTime() {
+  const now = dayjs()
+  return now.utc().format()
+}

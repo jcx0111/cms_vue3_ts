@@ -49,6 +49,8 @@ export default defineComponent({
       //判断是账号登录还是手机登录
       if (activeTag.value === 'account') {
         //accountRef有可能是undefined，需要使用可选链写法 ?.
+        console.log(accountRef.value)
+
         accountRef.value?.accountLogin()
       } else {
         phoneRef.value?.phoneLogin()

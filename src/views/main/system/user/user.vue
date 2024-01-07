@@ -23,7 +23,11 @@
       >
         <!-- header中的插槽 -->
         <template #headerHandler>
-          <el-button type="primary" size="small" v-if="btnPermission.includes('system:user:create')"
+          <el-button
+            type="primary"
+            size="small"
+            v-if="btnPermission.includes('system:user:create')"
+            @click="dialogVisible"
             >添加用户</el-button
           >
         </template>
@@ -37,18 +41,20 @@
         <template #updateAt="scope">
           <span>{{ $filters.formatTime(scope.row.updateAt) }}</span>
         </template>
-        <template #handler>
+        <template #handler="scope">
           <div class="handler-btns">
             <el-button icon="el-icon-edit" type="text">编辑</el-button>
             <el-button
               icon="el-icon-delete"
               type="text"
               v-if="btnPermission.includes('system:user:delete')"
+              @click="btnDeleteHandler(scope.row)"
               >删除</el-button
             >
           </div>
         </template>
       </hy-table>
+      <Dialog ref="dialogRef" @addUser="addNewUser"></Dialog>
     </div>
   </div>
 </template>
@@ -57,20 +63,23 @@
 import { defineComponent, ref, computed } from 'vue'
 import HyForm from '@/base-ui/form'
 import HyTable from '@/base-ui/table'
+import Dialog from '@/base-ui/dialog'
 import { searchFormConfig } from './config/search.config'
 import { useStore } from '@/store'
+
 // import { Search } from '@element-plus/icons-vue'
 
 export default defineComponent({
   name: 'user',
   components: {
     HyForm,
-    HyTable
+    HyTable,
+    Dialog
   },
   // directives: {
   //   permission: {
   //     mounted(el: HTMLElement, binding) {
-  //       console.log(binding.value.length)
+  //       console.log(this)
   //     }
   //   }
   // },
@@ -89,15 +98,20 @@ export default defineComponent({
       formData.value.sport = ''
       formData.value.createTime = ''
     }
+    function getUserList(row?: any, newUser?: any) {
+      store.dispatch('system/getPageListAction', {
+        pageUrl: '/mock/user/list',
+        queryInfo: {
+          offset: 0,
+          size: 10,
+          row,
+          newUser
+        }
+      })
+    }
     const store = useStore()
     const btnPermission = store.state.login.btnPermission
-    store.dispatch('system/getPageListAction', {
-      pageUrl: '/mock/user/list',
-      qaueryInfo: {
-        offset: 0,
-        size: 10
-      }
-    })
+    getUserList()
     const userList = computed(() => store.state.system.userList)
     const userCount = computed(() => store.state.system.userCount)
     const title = '用户列表'
@@ -110,8 +124,23 @@ export default defineComponent({
       { prop: 'updateAt', label: '修改时间', minWidth: '180', slotName: 'updateAt' },
       { label: '操作', minWidth: '180', slotName: 'handler' }
     ]
-
+    // 展示table序号
     const showIndexColumn = true
+    //添加用户
+    const dialogRef = ref<InstanceType<typeof Dialog>>()
+    const dialogVisible = () => {
+      if (dialogRef.value) {
+        dialogRef.value.dialogFormVisible = true
+      }
+    }
+    const addNewUser = (newUser: any) => {
+      // console.log('user:', option)
+      getUserList(undefined, newUser)
+    }
+    // 删除用户
+    const btnDeleteHandler = (row: any) => {
+      getUserList(row)
+    }
 
     return {
       searchFormConfig,
@@ -122,7 +151,11 @@ export default defineComponent({
       userList,
       userCount,
       propList,
-      showIndexColumn
+      showIndexColumn,
+      dialogRef,
+      dialogVisible,
+      addNewUser,
+      btnDeleteHandler
     }
   }
 })

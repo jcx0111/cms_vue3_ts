@@ -33,7 +33,8 @@ import {
   ElBreadcrumbItem,
   ElTableColumn,
   ElPagination,
-  ElCard
+  ElCard,
+  ElDialog
 } from 'element-plus'
 
 import 'element-plus/lib/theme-chalk/index.css'
@@ -69,7 +70,8 @@ const components = [
   ElBreadcrumb,
   ElBreadcrumbItem,
   ElPagination,
-  ElCard
+  ElCard,
+  ElDialog
 ]
 //全局注册element-plus组件
 export default function register(app: App): void {
